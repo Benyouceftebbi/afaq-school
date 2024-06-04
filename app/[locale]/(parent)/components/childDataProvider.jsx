@@ -9,7 +9,7 @@ export const AppContext = createContext();
 export const  FetchChildDataProvider = ({ children,slug}) => {
     const { parent } = useParentData();
   const childData = parent?.children.find((child) => child.id === slug);
-  console.log("childdata",childData);
+
     if (!childData) {
       return <div>Loading...</div>;
     }
